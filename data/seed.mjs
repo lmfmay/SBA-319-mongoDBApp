@@ -10,16 +10,93 @@ dotenv.config({ path: '../.env' })
 //Sample talent data
 const talents = [
     {
-        name: 'john_doe',
-        email: 'john@example.com',
-        completedProjects: [{
-            title: 'A message to James',
-            description: 'An audio message to James from his grandfather.',
-            category: 'Personal Message'}]
+        "name": 'john_doe',
+        "email": 'john@example.com',
+        "completedProjects": [{
+            "title": 'A message to James',
+            "description": 'An audio message to James from his grandfather.',
+            "category": 'Personal Message'}]
     },
     {
-        name: 'jane_smith',
-        email: 'jane@example.com'
+        "name": "jerry_doe",
+        "email": "jerry@example.com",
+        "completedProjects": [{
+            "title": "French-English Translation",
+            "description": "A translation project between French and English.",
+            "category": "Translations"
+        }]
+    },
+    {
+        "name": "jane_smith",
+        "email": "jane.smith@example.com",
+        "completedProjects": [{
+            "title": "Short Story Narration",
+            "description": "An audiobook of a short story narrated by the author.",
+            "category": "Audio Book"
+        }]
+    },
+    {
+        "name": "alex_jones",
+        "email": "alex.jones@example.com",
+        "completedProjects": [{
+            "title": "French-English Translation",
+            "description": "A translation project between French and English.",
+            "category": "Translations"
+        }]
+    },
+    {
+        "name": "emma_watson",
+        "email": "emma.watson@example.com",
+        "completedProjects": [{
+            "title": "Mystery Audiobook",
+            "description": "An audiobook version of a mystery novel.",
+            "category": "Audio Book"
+        }]
+    },
+    {
+        "name": "liam_johnson",
+        "email": "liam.johnson@example.com",
+        "completedProjects": [{
+            "title": "French-English Translation",
+            "description": "A translation project between French and English.",
+            "category": "Translations"
+        }]
+    },
+    {
+        "name": "olivia_brown",
+        "email": "olivia.brown@example.com",
+        "completedProjects": [{
+            "title": "The Great Adventure",
+            "description": "An audiobook of 'The Great Adventure' by an anonymous author.",
+            "category": "Audio Book"
+        }]
+    },
+    {
+        "name": "noah_white",
+        "email": "noah.white@example.com",
+        "completedProjects": [{
+            "title": "Advice to Michael",
+            "description": "A personal message to Michael giving life advice.",
+            "category": "Personal Message"
+        }]
+    },
+    {
+        "name": "isabella_clark",
+        "email": "isabella.clark@example.com",
+        "completedProjects": [{
+            "title": "French-English Translation",
+            "description": "A translation project between French and English.",
+            "category": "Translations"
+        }]
+    },
+    {
+        "name": "mason_davis",
+        "email": "mason.davis@example.com",
+        "completedProjects": [{
+            "title": "French-English Translation",
+            "description": "A translation project between French and English.",
+            "category": "Translations"
+        }]
     }
 ];
 
