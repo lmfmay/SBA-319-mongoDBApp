@@ -8,8 +8,10 @@ router.route('/')
     .post(talentController.addTalent)
 //read
     .get(talentController.getTalents)
+
+router.route('/:id')
 //update
-
+    .put(talentController.updateTalentDetails)
 //delete
-
+    .delete(talentController.deleteTalent)
 export default router
