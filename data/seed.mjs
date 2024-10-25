@@ -100,19 +100,113 @@ const talents = [
     }
 ];
 
+//Sample client data
+const clients = [
+    {
+        "name": "charlotte_king",
+        "email": "charlotte.king@example.com",
+        "requestedProjects": [{
+            "title": "A message to James",
+            "description": "An audio message to James from his grandfather.",
+            "category": "Personal Message"
+        }]
+    },
+    {
+        "name": "ethan_moore",
+        "email": "ethan.moore@example.com",
+        "requestedProjects": [{
+            "title": "The Great Adventure Audiobook",
+            "description": "An audiobook version of 'The Great Adventure' by an anonymous author.",
+            "category": "Audio Book"
+        }]
+    },
+    {
+        "name": "mia_taylor",
+        "email": "mia.taylor@example.com",
+        "requestedProjects": [{
+            "title": "Spanish-English Translation",
+            "description": "A translation of a popular children's story between Spanish and English.",
+            "category": "Translations"
+        }]
+    },
+    {
+        "name": "lucas_anderson",
+        "email": "lucas.anderson@example.com",
+        "requestedProjects": [{
+            "title": "A Note to Sarah",
+            "description": "An audio message for Sarah from her long-time friend.",
+            "category": "Personal Message"
+        }]
+    },
+    {
+        "name": "amelia_martin",
+        "email": "amelia.martin@example.com",
+        "requestedProjects": [{
+            "title": "Mystery Novel Audiobook",
+            "description": "An audiobook version of a mystery novel.",
+            "category": "Audio Book"
+        }]
+    },
+    {
+        "name": "logan_thomas",
+        "email": "logan.thomas@example.com",
+        "requestedProjects": [{
+            "title": "French-English Translation",
+            "description": "A translation project between French and English.",
+            "category": "Translations"
+        }]
+    },
+    {
+        "name": "ava_jackson",
+        "email": "ava.jackson@example.com",
+        "requestedProjects": [{
+            "title": "Life Advice to Michael",
+            "description": "A personal message giving life advice to Michael.",
+            "category": "Personal Message"
+        }]
+    },
+    {
+        "name": "benjamin_white",
+        "email": "benjamin.white@example.com",
+        "requestedProjects": [{
+            "title": "Short Story Audiobook",
+            "description": "An audiobook of a short story narrated by the author.",
+            "category": "Audio Book"
+        }]
+    },
+    {
+        "name": "harper_clark",
+        "email": "harper.clark@example.com",
+        "requestedProjects": [{
+            "title": "Cultural Phrase Translation",
+            "description": "A project to translate cultural phrases between Japanese and English.",
+            "category": "Translations"
+        }]
+    },
+    {
+        "name": "elijah_lee",
+        "email": "elijah.lee@example.com",
+        "requestedProjects": [{
+            "title": "A Letter to Emma",
+            "description": "A personal message from Emma's parents.",
+            "category": "Personal Message"
+        }]
+    }
+]
+
 async function seedDatabase() {
     try {
         // Clean up the existing data
         await Talent.deleteMany({});
-        // await Client.deleteMany({});
+        await Client.deleteMany({});
         // await Testimonial.deleteMany({});
 
         // Insert new data
         const createdTalents = await Talent.insertMany(talents);
         console.log('Talents seeded:', createdTalents);
 
-        // const createdClients = await Client.insertMany(clients);
-        // console.log('Clients seeded:', createdClients);
+        const createdClients = await Client.insertMany(clients);
+        console.log('Clients seeded:', createdClients);
 
         // const createdTestimonials = await Testimonial.insertMany(testimonials);
         // console.log('Testimonials seeded:', createdTestimonials);
