@@ -194,12 +194,56 @@ const clients = [
     }
 ]
 
+//sample testimonial data
+const testimonials = [
+    {
+        "name": "charlotte_king",
+        "testimonial": "John did a great job in this project and I really enjoyed working with him."
+    },
+    {
+        "name": "ethan_moore",
+        "testimonial": "Jane was professional and delivered the project on time with high quality."
+    },
+    {
+        "name": "mia_taylor",
+        "testimonial": "Alex was a pleasure to work with. His attention to detail was outstanding."
+    },
+    {
+        "name": "lucas_anderson",
+        "testimonial": "Emma's communication throughout the project made the process smooth and efficient."
+    },
+    {
+        "name": "amelia_martin",
+        "testimonial": "Liam went above and beyond to meet all the project requirements. Highly recommended."
+    },
+    {
+        "name": "logan_thomas",
+        "testimonial": "Olivia demonstrated a deep understanding of the project and delivered exceptional results."
+    },
+    {
+        "name": "ava_jackson",
+        "testimonial": "Noah was collaborative and his expertise really shone through in the final product."
+    },
+    {
+        "name": "benjamin_white",
+        "testimonial": "Isabella's ability to adapt to changes in the project was impressive. A great team player."
+    },
+    {
+        "name": "harper_clark",
+        "testimonial": "Mason delivered the project ahead of schedule and exceeded expectations."
+    },
+    {
+        "name": "elijah_lee",
+        "testimonial": "Sophia's creativity and problem-solving skills were crucial to the success of the project."
+    }
+]
+
 async function seedDatabase() {
     try {
         // Clean up the existing data
         await Talent.deleteMany({});
         await Client.deleteMany({});
-        // await Testimonial.deleteMany({});
+        await Testimonial.deleteMany({});
 
         // Insert new data
         const createdTalents = await Talent.insertMany(talents);
@@ -208,8 +252,8 @@ async function seedDatabase() {
         const createdClients = await Client.insertMany(clients);
         console.log('Clients seeded:', createdClients);
 
-        // const createdTestimonials = await Testimonial.insertMany(testimonials);
-        // console.log('Testimonials seeded:', createdTestimonials);
+        const createdTestimonials = await Testimonial.insertMany(testimonials);
+        console.log('Testimonials seeded:', createdTestimonials);
 
         console.log('Seeding completed!');
         process.exit();  // Exit once the seeding is done
