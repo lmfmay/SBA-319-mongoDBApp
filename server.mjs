@@ -3,6 +3,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import connectDB from './db/conn.mjs';
+import { error } from './utilities/error.mjs';
+import talentRoutes from "./routes/talentRoutes.mjs";
 
 //setups
 const app = express();
@@ -16,10 +18,23 @@ connectDB()
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json({extended:true}));
 
+
+
 //routes
 app.get('/',async(req,res)=>{
     res.send('Server is working!')
 })
+app.use('/talent',talentRoutes)
+
+//Error Handling
+app.use((req, res, next) => {
+    next(error(404, "Resource Not Found"));
+  });
+
+app.use((err, req, res, next) => {//Err returned from previous error handling middleware
+    res.status(err.status || 500);
+    res.json({ error: err.message });
+  });
 
 //listen
 app.listen(PORT,()=>{
