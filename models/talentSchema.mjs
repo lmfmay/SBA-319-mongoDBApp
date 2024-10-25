@@ -20,5 +20,5 @@ const talentSchema = new mongoose.Schema({
         type: [completedProjectsSchema]
     }
 })
-
+// Adding unique key to email is for the purpose of validation and index creation.
 export default mongoose.model('Talent',talentSchema)

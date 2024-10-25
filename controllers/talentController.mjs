@@ -11,7 +11,6 @@ async function getTalents(req,res,next){
     } catch (err) {
        console.error(err);
        next(error(500, 'Server Error'))
-       //res.status(500).json({msg:'Server error'})
     }
 }
 
@@ -23,9 +22,10 @@ async function addTalent(req,res,next){
         await newTalent.save();
         //return results
         res.json(newTalent);
+    //Test data validation: Trying to add a talent without a name/email field will give a validation error.
     } catch (err) {
        console.error(err);
-       next(error(500, 'Server Error'))
+       next(error(500, 'Validation failed. Missing name/email fields, or email already exists in database.'))
     }
 }
 

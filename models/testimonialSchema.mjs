@@ -11,4 +11,6 @@ const testimonialSchema = new mongoose.Schema({
     }
 })
 
+//testimonials generally have a higher write-to-read ratio, hence doesn't really require an index.
+
 export default mongoose.model('Testimonial',testimonialSchema)

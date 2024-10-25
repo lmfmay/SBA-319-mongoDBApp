@@ -20,5 +20,5 @@ const clientSchema = new mongoose.Schema({
         type: [requestedProjectsSchema]
     }
 })
-
+// Adding unique key to email is for the purpose of validation and index creation.
 export default mongoose.model('Client',clientSchema)
