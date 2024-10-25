@@ -15,4 +15,21 @@ async function getTalents(req,res){
     }
 }
 
-export default {getTalents}
+//Add talent to DB
+async function addTalent(req,res){
+    try {
+        //specify action
+        let newTalent = new Talent(req.body)
+        await newTalent.save();
+        //return results
+        res.json(newTalent);
+    } catch (err) {
+       console.error(err);
+       next(error(500, 'Server Error'))
+       //res.status(500).json({msg:'Server error'})
+    }
+}
+
+
+
+export default {getTalents, addTalent}

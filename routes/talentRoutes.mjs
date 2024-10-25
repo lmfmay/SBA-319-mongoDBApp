@@ -5,7 +5,7 @@ const router = express.Router()
 
 router.route('/')
 //create
-
+    .post(talentController.addTalent)
 //read
     .get(talentController.getTalents)
 //update
