@@ -1,6 +1,6 @@
 # SBA 319: MongoDB Application
 ## Project description
-This project demonstrates my understanding of MongoDB/Mongoose and my capability to create a functional server application with Node, Express and MongoDB.
+This project demonstrates my understanding of MongoDB/Mongoose and my capability to create a functional server application with Node, Express and MongoDB. This server application supports a web app that connects Talents and Clients for audio projects. Sample data collections in this project include talents, clients, and testimonials from clients.
 
 ### API Reference
    VERB 		 | 		  PATH 		 |  	 DESCRIPTION

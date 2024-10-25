@@ -24,8 +24,9 @@ app.use(bodyParser.json({extended:true}));
 
 //routes
 app.get('/',async(req,res)=>{
-    res.send('Server is working!')
+    res.send('This server supports CRUD operations for 3 data collections: talent, client, and testimonial.')
 })
+
 app.use('/talent',talentRoutes)
 app.use('/client',clientRoutes)
 app.use('/testimonial',testimonialRoutes)
