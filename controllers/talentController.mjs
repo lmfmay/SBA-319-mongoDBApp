@@ -42,7 +42,7 @@ async function updateTalentDetails(req,res,next){
     }
 }
 
-//Update talent in DB
+//Delete talent in DB
 async function deleteTalent(req,res,next){
     try {
         //specify action

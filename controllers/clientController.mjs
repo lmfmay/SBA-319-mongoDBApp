@@ -42,7 +42,7 @@ async function updateClientDetails(req,res,next){
     }
 }
 
-//Update client in DB
+//Delete client in DB
 async function deleteClient(req,res,next){
     try {
         //specify action
