@@ -14,4 +14,5 @@ router.route('/:id')
     .put(talentController.updateTalentDetails)
 //delete
     .delete(talentController.deleteTalent)
+    
 export default router

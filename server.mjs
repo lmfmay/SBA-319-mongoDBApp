@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 import connectDB from './db/conn.mjs';
 import { error } from './utilities/error.mjs';
 import talentRoutes from "./routes/talentRoutes.mjs";
+import clientRoutes from "./routes/clientRoutes.mjs"
 
 //setups
 const app = express();
@@ -25,6 +26,7 @@ app.get('/',async(req,res)=>{
     res.send('Server is working!')
 })
 app.use('/talent',talentRoutes)
+app.use('/client',clientRoutes)
 
 //Error Handling
 app.use((req, res, next) => {
