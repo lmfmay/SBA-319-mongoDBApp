@@ -2,7 +2,7 @@ import { error } from "../utilities/error.mjs";
 import Talent from '../models/talentSchema.mjs'
 
 //Get list of all talents in DB
-async function getTalents(req,res){
+async function getTalents(req,res,next){
     try {
         //specify action
         let allTalents = await Talent.find({});
@@ -16,7 +16,7 @@ async function getTalents(req,res){
 }
 
 //Add talent to DB
-async function addTalent(req,res){
+async function addTalent(req,res,next){
     try {
         //specify action
         let newTalent = new Talent(req.body)
@@ -30,7 +30,7 @@ async function addTalent(req,res){
 }
 
 //Update talent in DB
-async function updateTalentDetails(req,res){
+async function updateTalentDetails(req,res,next){
     try {
         //specify action
         let updatedTalent = await Talent.findByIdAndUpdate(req.params.id,req.body,{new:true});
@@ -43,7 +43,7 @@ async function updateTalentDetails(req,res){
 }
 
 //Update talent in DB
-async function deleteTalent(req,res){
+async function deleteTalent(req,res,next){
     try {
         //specify action
         let deletedTalent = await Talent.findByIdAndDelete(req.params.id);
@@ -57,5 +57,3 @@ async function deleteTalent(req,res){
 
 
 export default {getTalents, addTalent, updateTalentDetails, deleteTalent}
-
-//TROUBLESHOOT NEXT ERROR WHEN POSTING NEW TALENT WITH EXISTING EMAIL
